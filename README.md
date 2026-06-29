@@ -1,4 +1,3 @@
-````markdown
 # Time Unit Asset (TU) Bind
 
 A Hyperledger Fabric blockchain application implementing **Time Unit Asset (TU) Bind** architecture for managing transaction workflows, including **Transition**, **Open Query Transfer**, and performance benchmarking using **Hyperledger Caliper**.
