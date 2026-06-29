@@ -1,0 +1,23 @@
+name: fabric-timebank
+version: "2.0.0"
+
+caliper:
+  blockchain: fabric
+
+channels:
+  - channelName: mychannel
+    contracts:
+      - id: timebank
+
+organizations:
+  - mspid: Org1MSP
+    identities:
+      certificates:
+        - name: admin
+          clientPrivateKey:
+            path: /home/trushang/Desktop/hyperledger/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/c5c01a5b513b91a2851f614dbf3c9ee91a5b2f5ba7e5be3be549df8b011baaa2_sk
+          clientSignedCert:
+            path: /home/trushang/Desktop/hyperledger/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/cert.pem
+    connectionProfile:
+      path: /home/trushang/Desktop/hyperledger/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/connection-org1.yaml
+      discover: true

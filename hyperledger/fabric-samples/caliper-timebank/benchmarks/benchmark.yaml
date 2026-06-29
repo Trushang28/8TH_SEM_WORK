@@ -1,0 +1,42 @@
+test:
+  name: TimeBank Worker Scaling Test
+  description: Finding max throughput by increasing workers
+
+  workers:
+    number: 50
+
+  rounds:
+    - label: "CreateUser"
+      txNumber: 700
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: workload/createUser.js
+
+    - label: "PostService"
+      txNumber: 700
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: workload/postService.js
+
+    - label: "FullFlow"
+      txNumber: 700
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 20
+      workload:
+        module: workload/matchAndComplete.js
+
+monitors:
+  resource:
+     - module: docker
+       options:
+         interval: 5
+         containers:
+           - all

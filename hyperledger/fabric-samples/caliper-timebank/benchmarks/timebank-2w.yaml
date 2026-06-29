@@ -1,0 +1,266 @@
+# test:
+#   name: TimeBank Benchmark - 2 Workers
+#   description: Benchmarking TimeBank chaincode with 2 workers
+
+#   workers:
+#     number: 2
+
+#   rounds:
+#     - label: "2w-100tx"
+#       txNumber: 100
+#       rateControl:
+#         type: fixed-rate
+#         opts:
+#           tps: 20
+#       workload:
+#         module: workload/createUser.js
+
+#     - label: "2w-200tx"
+#       txNumber: 200
+#       rateControl:
+#         type: fixed-rate
+#         opts:
+#           tps: 20
+#       workload:
+#         module: workload/createUser.js
+
+#     - label: "2w-300tx"
+#       txNumber: 300
+#       rateControl:
+#         type: fixed-rate
+#         opts:
+#           tps: 20
+#       workload:
+#         module: workload/createUser.js
+
+#     - label: "2w-400tx"
+#       txNumber: 400
+#       rateControl:
+#         type: fixed-rate
+#         opts:
+#           tps: 20
+#       workload:
+#         module: workload/createUser.js
+
+#     - label: "2w-500tx"
+#       txNumber: 500
+#       rateControl:
+#         type: fixed-rate
+#         opts:
+#           tps: 20
+#       workload:
+#         module: workload/createUser.js
+
+#     - label: "2w-600tx"
+#       txNumber: 600
+#       rateControl:
+#         type: fixed-rate
+#         opts:
+#           tps: 20
+#       workload:
+#         module: workload/createUser.js
+
+#     - label: "2w-700tx"
+#       txNumber: 700
+#       rateControl:
+#         type: fixed-rate
+#         opts:
+#           tps: 20
+#       workload:
+#         module: workload/createUser.js
+
+#     - label: "2w-800tx"
+#       txNumber: 800
+#       rateControl:
+#         type: fixed-rate
+#         opts:
+#           tps: 20
+#       workload:
+#         module: workload/createUser.js
+
+#     - label: "2w-900tx"
+#       txNumber: 900
+#       rateControl:
+#         type: fixed-rate
+#         opts:
+#           tps: 20
+#       workload:
+#         module: workload/createUser.js
+
+#     - label: "2w-1000tx"
+#       txNumber: 1000
+#       rateControl:
+#         type: fixed-rate
+#         opts:
+#           tps: 20
+#       workload:
+#         module: workload/createUser.js
+
+
+test:
+  name: TimeBank Benchmark - 2 Workers
+  description: Benchmarking all TimeBank operations with 2 workers
+
+  workers:
+    number: 50
+
+  rounds:
+    - label: "50w-CreateUser-100tx"
+      txNumber: 100
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/createUser.js }
+
+    - label: "50w-PostService-100tx"
+      txNumber: 100
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/postService.js }
+
+    - label: "50w-FullFlow-100tx"
+      txNumber: 100
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: workload/matchAndComplete.js }
+
+    - label: "50w-CreateUser-200tx"
+      txNumber: 200
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/createUser.js }
+
+    - label: "50w-PostService-200tx"
+      txNumber: 200
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/postService.js }
+
+    - label: "50w-FullFlow-200tx"
+      txNumber: 200
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: workload/matchAndComplete.js }
+
+    - label: "50w-CreateUser-300tx"
+      txNumber: 300
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/createUser.js }
+
+    - label: "50w-PostService-300tx"
+      txNumber: 300
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/postService.js }
+
+    - label: "50w-FullFlow-300tx"
+      txNumber: 300
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: workload/matchAndComplete.js }
+
+    - label: "50w-CreateUser-400tx"
+      txNumber: 400
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/createUser.js }
+
+    - label: "50w-PostService-400tx"
+      txNumber: 400
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/postService.js }
+
+    - label: "50w-FullFlow-400tx"
+      txNumber: 400
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: workload/matchAndComplete.js }
+
+    - label: "50w-CreateUser-500tx"
+      txNumber: 500
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/createUser.js }
+
+    - label: "50w-PostService-500tx"
+      txNumber: 500
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/postService.js }
+
+    - label: "50w-FullFlow-500tx"
+      txNumber: 500
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: workload/matchAndComplete.js }
+
+    - label: "50w-CreateUser-600tx"
+      txNumber: 600
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/createUser.js }
+
+    - label: "50w-PostService-600tx"
+      txNumber: 600
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/postService.js }
+
+    - label: "50w-FullFlow-600tx"
+      txNumber: 600
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: workload/matchAndComplete.js }
+
+    - label: "50w-CreateUser-700tx"
+      txNumber: 700
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/createUser.js }
+
+    - label: "50w-PostService-700tx"
+      txNumber: 700
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/postService.js }
+
+    - label: "50w-FullFlow-700tx"
+      txNumber: 700
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: workload/matchAndComplete.js }
+
+    - label: "50w-CreateUser-800tx"
+      txNumber: 800
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/createUser.js }
+
+    - label: "50w-PostService-800tx"
+      txNumber: 800
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/postService.js }
+
+    - label: "50w-FullFlow-800tx"
+      txNumber: 800
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: workload/matchAndComplete.js }
+
+    - label: "50w-CreateUser-900tx"
+      txNumber: 900
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/createUser.js }
+
+    - label: "50w-PostService-900tx"
+      txNumber: 900
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/postService.js }
+
+    - label: "50w-FullFlow-900tx"
+      txNumber: 900
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: workload/matchAndComplete.js }
+
+    - label: "50w-CreateUser-1000tx"
+      txNumber: 1000
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/createUser.js }
+
+    - label: "50w-PostService-1000tx"
+      txNumber: 1000
+      rateControl: { type: fixed-rate, opts: { tps: 20 } }
+      workload: { module: workload/postService.js }
+
+    - label: "50w-FullFlow-1000tx"
+      txNumber: 1000
+      rateControl: { type: fixed-rate, opts: { tps: 10 } }
+      workload: { module: workload/matchAndComplete.js }
+
+monitors:
+  resource:
+    - module: docker
+      options:
+        interval: 5
+        containers:
+          - peer0.org1.example.com
+          - peer0.org2.example.com
+          - orderer.example.com
